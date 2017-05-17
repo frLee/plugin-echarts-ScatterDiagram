@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+    <id>com.fr.solution.plugin.chart.echarts</id>
+    <name><![CDATA[ECharts图表]]></name>
+    <active>yes</active>
+    <version>3.1</version>
+    <env-version>8.0</env-version>
+    <jartime>2016-05-28</jartime>
+    <vendor email="solution@finereport.com">solution</vendor>
+    <description><![CDATA[]]></description>
+    <change-notes><![CDATA[]]></change-notes>
+    <extra-core>
+        <LocaleFinder class="com.fr.plugin.echarts.scatters.common.EChartScatterLocaleFinder"/>
+        <JavaScriptFileHandler class="com.fr.plugin.echarts.scatters.common.EChartScatterFileLoader"/>
+    </extra-core>
+    <extra-report/>
+    <extra-designer/>
+    <extra-platform/>
+    <extra-chart>
+        <IndependentChartProvider class="com.fr.solution.plugin.chart.echarts.pie.EChartsPie"
+                                  plotID="EChartsPiePlot"/>
+        <IndependentChartProvider class="com.fr.solution.plugin.chart.echarts.map.EChartsChineseMap"
+                                  plotID="EChartsChinaMapPlot"/>
+    </extra-chart>
+    <extra-chart-designer>
+        <IndependentChartUIProvider class="com.fr.solution.plugin.chart.echarts.pie.EChartsPieUI"
+                                    plotID="EChartsPiePlot"/>
+        <IndependentChartUIProvider class="com.fr.solution.plugin.chart.echarts.map.EChartsChineseMapUI"
+                                    plotID="EChartsChinaMapPlot"/>
+    </extra-chart-designer>
+</plugin>
