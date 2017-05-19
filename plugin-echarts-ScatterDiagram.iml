@@ -11,5 +11,8 @@
     <orderEntry type="module" module-name="chart-chartattr" />
     <orderEntry type="module" module-name="base-basic" />
     <orderEntry type="module" module-name="chart-chartglyph" />
+    <orderEntry type="module" module-name="designer_chart" />
+    <orderEntry type="module" module-name="designer_base" />
+    <orderEntry type="module" module-name="base" />
   </component>
 </module>

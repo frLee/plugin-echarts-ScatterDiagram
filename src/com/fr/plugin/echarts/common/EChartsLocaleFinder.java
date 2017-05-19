@@ -1,11 +1,11 @@
-package com.fr.plugin.echarts.scatters.common;
+package com.fr.plugin.echarts.common;
 
 import com.fr.stable.fun.impl.AbstractLocaleFinder;
 
 /**
  * Created by kk on 2017/5/17.
  */
-public class EChartScatterFileLoader extends AbstractLocaleFinder {
+public class EChartsLocaleFinder extends AbstractLocaleFinder {
 
     @Override
     public String find() {

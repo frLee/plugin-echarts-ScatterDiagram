@@ -1,4 +1,4 @@
-package com.fr.plugin.echarts.scatters.common.glyph;
+package com.fr.plugin.echarts.common.glyph;
 
 import com.fr.chart.chartglyph.LegendGlyph;
 import com.fr.chart.chartglyph.LegendItem;

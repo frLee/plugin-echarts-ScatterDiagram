@@ -1,13 +1,13 @@
-package com.fr.plugin.echarts.scatters.scatter;
+package com.fr.plugin.echarts.scatter;
 
 
 import com.fr.chart.chartattr.Chart;
-import com.fr.plugin.echarts.scatters.common.base.AbstractIndependentEchartScatterProvider;
+import com.fr.plugin.echarts.common.base.AbstractIndependentEchartsProvider;
 
 /**
  * Created by kk on 2017/5/17.
  */
-public class EChartScatter extends AbstractIndependentEchartScatterProvider {
+public class EChartScatter extends AbstractIndependentEchartsProvider {
 
     private static final String CHARTNAME = "Plugin-ECharts_Scatter";
 

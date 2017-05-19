@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plugin>
-    <id>com.fr.solution.plugin.chart.echarts</id>
-    <name><![CDATA[ECharts图表]]></name>
+    <id>com.fr.plugin.echarts.scatters</id>
+    <name><![CDATA[ECharts气泡图]]></name>
     <active>yes</active>
-    <version>3.1</version>
+    <version>1.0</version>
     <env-version>8.0</env-version>
     <jartime>2016-05-28</jartime>
-    <vendor email="solution@finereport.com">solution</vendor>
+    <vendor>lee</vendor>
     <description><![CDATA[]]></description>
     <change-notes><![CDATA[]]></change-notes>
     <extra-core>
-        <LocaleFinder class="com.fr.plugin.echarts.scatters.common.EChartScatterLocaleFinder"/>
-        <JavaScriptFileHandler class="com.fr.plugin.echarts.scatters.common.EChartScatterFileLoader"/>
+        <LocaleFinder class="com.fr.plugin.echarts.common.EChartsLocaleFinder"/>
+        <JavaScriptFileHandler class="com.fr.plugin.echarts.common.EChartsFileLoader"/>
     </extra-core>
     <extra-report/>
     <extra-designer/>
     <extra-platform/>
     <extra-chart>
-        <IndependentChartProvider class="com.fr.solution.plugin.chart.echarts.pie.EChartsPie"
-                                  plotID="EChartsPiePlot"/>
-        <IndependentChartProvider class="com.fr.solution.plugin.chart.echarts.map.EChartsChineseMap"
-                                  plotID="EChartsChinaMapPlot"/>
+        <IndependentChartProvider class="com.fr.plugin.echarts.scatter.EChartScatter"
+                                  plotID="EChartScatterPlot"/>
     </extra-chart>
     <extra-chart-designer>
-        <IndependentChartUIProvider class="com.fr.solution.plugin.chart.echarts.pie.EChartsPieUI"
-                                    plotID="EChartsPiePlot"/>
-        <IndependentChartUIProvider class="com.fr.solution.plugin.chart.echarts.map.EChartsChineseMapUI"
-                                    plotID="EChartsChinaMapPlot"/>
+        <IndependentChartUIProvider class="com.fr.plugin.echarts.scatter.EChartScatterUI"
+                                    plotID="EChartScatterPlot"/>
     </extra-chart-designer>
 </plugin>

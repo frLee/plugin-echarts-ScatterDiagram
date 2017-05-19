@@ -1,4 +1,4 @@
-package com.fr.plugin.echarts.scatters.common;
+package com.fr.plugin.echarts.common;
 
 import com.fr.stable.EncodeConstants;
 import com.fr.stable.fun.impl.AbstractJavaScriptFileHandler;
@@ -6,7 +6,7 @@ import com.fr.stable.fun.impl.AbstractJavaScriptFileHandler;
 /**
  * Created by kk on 2017/5/17.
  */
-public class EChartScatterLocaleFinder extends AbstractJavaScriptFileHandler {
+public class EChartsFileLoader extends AbstractJavaScriptFileHandler {
 
     @Override
     public String[] pathsForFiles() {

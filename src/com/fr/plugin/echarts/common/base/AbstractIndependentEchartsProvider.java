@@ -1,13 +1,13 @@
-package com.fr.plugin.echarts.scatters.common.base;
+package com.fr.plugin.echarts.common.base;
 
 import com.fr.chart.fun.impl.AbstractIndependentChartProviderWithAPILevel;
 
 /**
  * Created by kk on 2017/5/17.
  */
-public abstract class AbstractIndependentEchartScatterProvider extends AbstractIndependentChartProviderWithAPILevel {
+public abstract class AbstractIndependentEchartsProvider extends AbstractIndependentChartProviderWithAPILevel {
 
-    private static final String WRAPPERNAME = "EchartScatter";
+    private static final String WRAPPERNAME = "EChartsFactory";
 
     @Override
     public String[] getRequiredJS() {
