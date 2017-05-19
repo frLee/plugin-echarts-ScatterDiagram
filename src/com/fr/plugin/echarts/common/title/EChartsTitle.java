@@ -2,6 +2,7 @@ package com.fr.plugin.echarts.common.title;
 
 import com.fr.chart.chartattr.Title;
 import com.fr.chart.chartglyph.TitleGlyph;
+import com.fr.plugin.echarts.common.glyph.EChartsTitleGlyph;
 import com.fr.stable.xml.XMLPrintWriter;
 import com.fr.stable.xml.XMLableReader;
 
@@ -13,7 +14,7 @@ public class EChartsTitle extends Title {
     private static final String XML_TAG = "EChartsTitle";
 
     @Override
-    public TitleGlyph createGlyph() {
+    public EChartsTitleGlyph createGlyph() {
         return super.createGlyph();
     }
 
