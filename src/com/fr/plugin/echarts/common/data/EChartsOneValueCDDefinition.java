@@ -2,7 +2,6 @@ package com.fr.plugin.echarts.common.data;
 
 import com.fr.chart.chartdata.NormalChartData;
 import com.fr.chart.chartdata.OneValueCDDefinition;
-import com.fr.solution.plugin.chart.echarts.common.data.EChartsNormalChartData;
 
 /**
  * Created by kk on 2017/5/24.
