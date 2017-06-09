@@ -31,6 +31,10 @@ public class EChartsTheme implements XMLable {
         this.themeName = themeName;
     }
 
+    /**
+     *读取XML标签中主题内容
+     * @param reader XML读取对象
+     */
     @Override
     public void readXML(XMLableReader reader) {
         if (reader.isChildNode()) {
@@ -41,6 +45,10 @@ public class EChartsTheme implements XMLable {
         }
     }
 
+    /**
+     * 将主题内容写入XML标签
+     * @param writer XML写入对象
+     */
     @Override
     public void writeXML(XMLPrintWriter writer) {
         writer.startTAG(SCATTERTHEME);
@@ -48,6 +56,11 @@ public class EChartsTheme implements XMLable {
         writer.end();
     }
 
+    /**
+     * 浅拷贝
+     * @return
+     * @throws CloneNotSupportedException
+     */
     @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();

@@ -10,6 +10,11 @@ import com.fr.stable.web.Repository;
  */
 public class EChartsTitleGlyph extends TitleGlyph {
 
+    private static final String TEXT = "text";
+    private static final String X = "x";
+    private static final String CENTER = "center";
+    private static final String SHOW = "show";
+
     public EChartsTitleGlyph(String title) {
         setText(title);
     }
@@ -19,11 +24,17 @@ public class EChartsTitleGlyph extends TitleGlyph {
         return createTitle(repo);
     }
 
+    /**
+     * 将TitleGlyph以JSONObject写入
+     * @param repo
+     * @return JSONObject
+     * @throws JSONException
+     */
     private JSONObject createTitle(Repository repo) throws JSONException {
         JSONObject t = JSONObject.create()
-                .put("text", getText())
-                .put("x", "center");
-        t.put("show", isVisible());
+                .put(TEXT, getText())
+                .put(X, CENTER);
+        t.put(SHOW, isVisible());
         return t;
     }
 }

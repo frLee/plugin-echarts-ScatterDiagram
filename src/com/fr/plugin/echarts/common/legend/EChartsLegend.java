@@ -12,9 +12,13 @@ public class EChartsLegend extends Legend {
 
     public static final String XML_TAG = "EChartsLegend";
 
+    /**
+     * 根据图例元素数组生成画图例的Glyph
+     * @param items 图例元素数组
+     * @return 画图例的Glyph
+     */
     public EChartsLegendGlyph createLegendGlyph(LegendItem[] items) {
         EChartsLegendGlyph resultGlyph = new EChartsLegendGlyph(items);
-        if (1==1) {}
         resultGlyph.setFont(getFRFont());
         resultGlyph.setGeneralInfo(this);
         resultGlyph.setPosition(getPosition());
