@@ -8,6 +8,8 @@ import com.fr.plugin.echarts.common.plot.EChartsPlot;
 import com.fr.plugin.echarts.scatter.glyph.EChartScatterPlotGlyph;
 import com.fr.plugin.echarts.scatter.monitor.MonitorScatter;
 import com.fr.stable.fun.FunctionProcessor;
+import com.fr.stable.xml.XMLPrintWriter;
+import com.fr.stable.xml.XMLableReader;
 
 /**
  * Created by kk on 2017/5/19.
@@ -57,5 +59,33 @@ public class EChartScatterPlot extends EChartsPlot {
         return MonitorScatter.getInstance();
     }
 
+    @Override
+    public String getPlotName() {
+        return null;
+    }
 
+    @Override
+    public boolean accept(Class<? extends Plot> obClass) {
+        return super.accept(obClass);
+    }
+
+    @Override
+    protected void readPlotXML(XMLableReader reader) {
+        super.readPlotXML(reader);
+    }
+
+    @Override
+    public void writeXML(XMLPrintWriter writer) {
+        super.writeXML(writer);
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public boolean equals(Object ob) {
+        return super.equals(ob);
+    }
 }

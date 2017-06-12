@@ -9,6 +9,6 @@ public class EChartsLocaleFinder extends AbstractLocaleFinder {
 
     @Override
     public String find() {
-        return "";
+        return "com/fr/plugin/echarts/locale/echarts";
     }
 }
