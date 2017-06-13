@@ -17,8 +17,6 @@ import java.awt.*;
  */
 public class EChartsThemePane extends BasicScrollPane<ECharts> {
 
-    private static final String[] themes = new String[]{};
-
     private UIDictionaryComboBox<String> themeComboBox;
 
     public EChartsThemePane(EChartStylePane stylePane) {

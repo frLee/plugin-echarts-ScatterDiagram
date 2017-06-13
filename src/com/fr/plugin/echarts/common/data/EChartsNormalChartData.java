@@ -20,5 +20,6 @@ public class EChartsNormalChartData extends NormalChartData {
      * 不做任何处理
      */
     public void dealHugeData() {
+        //新图表不处理大数据部分
     }
 }

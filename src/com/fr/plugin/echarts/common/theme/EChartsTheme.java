@@ -1,5 +1,6 @@
 package com.fr.plugin.echarts.common.theme;
 
+import com.fr.general.ComparatorUtils;
 import com.fr.stable.xml.XMLPrintWriter;
 import com.fr.stable.xml.XMLable;
 import com.fr.stable.xml.XMLableReader;
@@ -64,5 +65,11 @@ public class EChartsTheme implements XMLable {
     @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof EChartsTheme
+                && ComparatorUtils.equals(themeName, ((EChartsTheme) obj).themeName);
     }
 }

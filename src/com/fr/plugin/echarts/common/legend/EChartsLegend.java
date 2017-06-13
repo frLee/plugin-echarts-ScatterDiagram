@@ -4,7 +4,6 @@ import com.fr.chart.chartattr.Legend;
 import com.fr.chart.chartglyph.LegendItem;
 import com.fr.plugin.echarts.common.glyph.EChartsLegendGlyph;
 
-
 /**
  * Created by kk on 2017/5/17.
  */

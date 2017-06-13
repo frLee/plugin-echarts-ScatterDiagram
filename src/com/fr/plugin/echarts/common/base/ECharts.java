@@ -146,7 +146,7 @@ public class ECharts extends Chart {
      * @param reader XML读取器
      */
     @Override
-    public void readXML(XMLableReader reader) {
+    public void readChartXML(XMLableReader reader) {
         if (reader.isChildNode()) {
             String tagName = reader.getTagName();
             if (tagName.equals(EChartsTitle.XML_TAG)) {
@@ -189,7 +189,7 @@ public class ECharts extends Chart {
 
     /**
      * 检测两个对象是否相等
-     * @param ob 用 于比较的Object
+     * @param ob 用于比较的Object
      * @return 返回true或者false
      */
     @Override

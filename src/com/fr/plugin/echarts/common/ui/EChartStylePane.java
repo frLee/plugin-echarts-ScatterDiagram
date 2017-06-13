@@ -41,6 +41,9 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
         this.initComponents();
     }
 
+    /**
+     * 初始化swing控件
+     */
     private void initComponents() {
         setLayout(new BorderLayout());
         titlePane = new EChartsTitlePane(this);
@@ -64,6 +67,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
         };
     }
 
+    /**
+     * 初始化swing控件的监听
+     * @param parentComponent
+     */
     protected void initSelfListener(Container parentComponent) {
         for (int i = 0; i < parentComponent.getComponentCount(); i++) {
             Component tmpComp = parentComponent.getComponent(i);
@@ -76,22 +83,41 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
         }
     }
 
+    /**
+     * 获取图标文件路径
+     * @return
+     */
     public String getIconPath() {
         return "com/fr/plugin/echarts/images/toolbar_item.png";
     }
 
+    /**
+     * 弹框内容标题
+     * @return
+     */
     public String title4PopupWindow() {
         return PaneTitleConstants.CHART_STYLE_TITLE;
     }
 
+    /**
+     * 注册监听事件
+     * @param listener 观察者监听事件
+     */
     public void registerChangeListener(UIObserverListener listener) {
         this.uiObserverListener = listener;
     }
 
+    /**
+     * 是否可用回馈变化监听
+     * @return
+     */
     public boolean shouldResponseChangeListener() {
         return true;
     }
 
+    /**
+     * 创建pane组中的控件内容
+     */
     public class KindOfTabPane extends MultiTabPane<ECharts> {
 
         private void dealWithChosenPane(int index) {
@@ -113,6 +139,9 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             paneList.add(index, chosenPane);
         }
 
+        /**
+         * 初始化控件位置
+         */
         @Override
         protected void initLayout() {
             JPanel tabpane1 = new JPanel(new BorderLayout());
@@ -123,6 +152,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             add(centerPane, BorderLayout.CENTER);
         }
 
+        /**
+         * 处理tab变化的动作操作
+         * @param index
+         */
         @Override
         protected void dealWithTabChanged(int index) {
             dealWithChosenPane(index);
@@ -130,6 +163,9 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             tabChanged();
         }
 
+        /**
+         * tab变动
+         */
         @Override
         protected void tabChanged() {
             EChartStylePane.this.removeAttributeChangeListener();
@@ -137,6 +173,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             EChartStylePane.this.addAttributeChangeListener(listener);
         }
 
+        /**
+         * 初始化panlist
+         * @return
+         */
         @Override
         protected List<BasicPane> initPaneList() {
             List<BasicPane> paneList = new ArrayList<>();
@@ -147,6 +187,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             return paneList;
         }
 
+        /**
+         * 更新控件
+         * @param ob
+         */
         @Override
         public void populateBean(ECharts ob) {
             if (chart == null || kindOfTabPane.getSelectedIndex() == -1) {
@@ -155,6 +199,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             ((BasicBeanPane<ECharts>) paneList.get(kindOfTabPane.getSelectedIndex())).populateBean(chart);
         }
 
+        /**
+         * 更新控件
+         * @return
+         */
         @Override
         public ECharts updateBean() {
             if (chart == null) {
@@ -164,6 +212,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             return chart;
         }
 
+        /**
+         * 更新控件
+         * @param ob
+         */
         @Override
         public void updateBean(ECharts ob) {
             BasicBeanPane<ECharts> pane = ((BasicBeanPane<ECharts>) paneList.get(kindOfTabPane.getSelectedIndex()));
@@ -175,6 +227,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
             return true;
         }
 
+        /**
+         * 弹出框title
+         * @return
+         */
         @Override
         public String title4PopupWindow() {
             return TAB;
@@ -185,6 +241,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
         }
     }
 
+    /**
+     * 创建内容pane
+     * @return
+     */
     @Override
     protected JPanel createContentPane() {
         JPanel content = new JPanel(new BorderLayout());
@@ -196,6 +256,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
         return content;
     }
 
+    /**
+     * 更新界面 数据内容
+     * @param collection
+     */
     @Override
     public void populate(ChartCollection collection) {
         this.chart = (ECharts) collection.getSelectedChart();
@@ -207,6 +271,10 @@ public class EChartStylePane extends AbstractChartAttrPane implements UIObserver
         this.initAllListeners();
     }
 
+    /**
+     * 更新样式
+     * @param collection
+     */
     @Override
     public void update(ChartCollection collection) {
         kindOfTabPane.updateBean((ECharts) collection.getSelectedChart());
