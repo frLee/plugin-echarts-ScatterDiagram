@@ -6,6 +6,9 @@ import com.fr.design.mainframe.chart.gui.data.report.AbstractReportDataContentPa
 import com.fr.design.mainframe.chart.gui.data.table.AbstractTableDataContentPane;
 import com.fr.design.mainframe.chart.gui.type.AbstractChartTypePane;
 import com.fr.plugin.echarts.common.ui.AbstractIndependentEChartsUI;
+import com.fr.plugin.echarts.scatter.ui.EChartScatterChartTypePane;
+import com.fr.plugin.echarts.scatter.ui.EChartScatterReportDataContentPane;
+import com.fr.plugin.echarts.scatter.ui.EChartScatterTableDataContentPane;
 
 /**
  * Created by kk on 2017/5/19.
@@ -14,21 +17,21 @@ public class EChartScatterUI extends AbstractIndependentEChartsUI {
 
     @Override
     public AbstractChartTypePane getPlotTypePane() {
-        return null;
+        return new EChartScatterChartTypePane();
     }
 
     @Override
     public AbstractTableDataContentPane getTableDataSourcePane(Plot plot, ChartDataPane parent) {
-        return null;
+        return new EChartScatterTableDataContentPane(parent);
     }
 
     @Override
     public AbstractReportDataContentPane getReportDataSourcePane(Plot plot, ChartDataPane parent) {
-        return null;
+        return new EChartScatterReportDataContentPane(parent);
     }
 
     @Override
     public String getIconPath() {
-        return null;
+        return "com/fr/solution/plugin/chart/echarts/pie/images/pie.png";
     }
 }

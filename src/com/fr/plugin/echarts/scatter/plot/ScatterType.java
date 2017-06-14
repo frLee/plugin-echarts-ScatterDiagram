@@ -7,7 +7,7 @@ import com.fr.general.ComparatorUtils;
  */
 public enum ScatterType {
 
-    NONE("none");
+    NONE("none"), AREA("area"), RADIUS("radius");
 
     private String type;
 
